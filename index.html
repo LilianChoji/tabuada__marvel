@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Bebas+Neue&family=Bitter:wght@200;300&family=Bricolage+Grotesque&family=Cabin:ital,wght@0,400;1,600;1,700&family=Caprasimo&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,600&family=Dancing+Script:wght@400;600&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,200;1,700&family=Karla:ital,wght@0,200;0,300;0,500;0,700;1,300;1,400&family=Kdam+Thmor+Pro&family=Mochiy+Pop+One&family=Mooli&family=Passion+One&family=Permanent+Marker&family=Quicksand:wght@400;500;600&family=Roboto+Slab:wght@300;400&family=Roboto:ital,wght@0,300;0,500;0,700;1,100;1,900&family=Tomorrow:ital,wght@0,300;0,400;1,200;1,300;1,500&family=Wendy+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="banner">
+          <img src="imagem/banner.jpg" alt="">
+        </div>
+
+        <div class="tabuada">
+            <h1>Tabuada MARVEL</h1>
+        </div>
+
+        <button class="botao__mostrar" onclick="mostrarTabuada()">Mostrar Tabuada</button>
+        <button class="botao__limpar" onclick="limparTabuada()">Limpar Tabuada</button>
+    </div>
+    </header>
+
+    <script>
+
+        var tabuada = document.querySelector(".tabuada");
+        var mensagem = " ";
+       
+       function mostrarTabuada(){
+         var n = prompt("Digite um número");
+          n = parseFloat(n);
+
+          var i = 1;
+
+          while(i <= 10){
+            mensagem += n + " x " + i + " = " + (n * i) + "<br>";
+
+            i++;
+          }
+
+          tabuada.innerHTML = mensagem;
+       }
+
+          function limparTabuada(){
+            mensagem = " ";
+            tabuada.innerHTML = mensagem;
+          }
+    </script>
+</body>
+</html>
